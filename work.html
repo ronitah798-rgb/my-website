@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZeroPoverty - Ending Poverty Worldwide</title>
+    <style>
+        /* CSS Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .logo span {
+            color: #e74c3c;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+
+        nav ul li a:hover {
+            color: #e74c3c;
+            background: rgba(255,255,255,0.1);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                        url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 60px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+            font-size: 1.1rem;
+        }
+
+        .cta-button:hover {
+            background: #c0392b;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #2c3e50;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-title p {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .about-image img:hover {
+            transform: scale(1.05);
+        }
+
+        .about-text h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: #555;
+        }
+
+        /* Focu
+        .focus-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .focus-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .focus-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .focus-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .focus-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .focus-card:hover .focus-image img {
+            transform: scale(1.1);
+        }
+
+        .focus-content {
+            padding: 1.5rem;
+        }
+
+        .focus-content h4 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .focus-content p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .learn-more {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .learn-more:hover {
+            text-decoration: underline;
+        }
+        .stats {
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            color: white;
+            text-align: center;
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .stat-item {
+            padding: 2rem;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: #e74c3c;
+        }
+
+        .stat-label {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .gallery-item {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-info {
+            background: #2c3e50;
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 1.5rem;
+            color: #e74c3c;
+        }
+
+        .contact-details {
+            margin-bottom: 2rem;
+        }
+
+        .contact-details p {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .social-links a:hover {
+            background: #e74c3c;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: #e74c3c;
+        }
+
+        /* Page Content */
+        .page-content {
+            margin-top: 80px;
+            min-height: calc(100vh - 200px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            nav ul {
+                margin-top: 1rem;
+            }
+
+            nav ul li {
+                margin-left: 1rem;
+                margin-right: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-content,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 3rem 1rem;
+            }
+
+            .focus-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo">Zero<span>Poverty</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#focus">Our Focus</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#info">Get Involved</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Ending Poverty Through Collective Action</h1>
+            <p>Join us in our mission to eradicate poverty and create sustainable communities worldwide. Together, we can make a difference.</p>
+            <a href="#info" class="cta-button">Join Our Mission</a>
+        </div>
+    </section>
+    <section id="about" class="page-content">
+        <div class="section-title">
+            <h2>About Our Mission</h2>
+            <p>Learn about our journey and commitment to ending poverty</p>
+        </div>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1551524164-6ca5e3aa1c04?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Community Support">
+            </div>
+            <div class="about-text">
+                <h3>Our Vision for a Poverty-Free World</h3>
+                <p>ZeroPoverty was founded on the belief that every human being deserves access to basic necessities, education, and opportunities for growth. We work directly with communities to implement sustainable solutions that address the root causes of poverty.</p>
+                <p>Our approach combines immediate relief with long-term development strategies, ensuring that the communities we serve become self-sufficient and resilient.</p>
+                <p>Through partnerships with local organizations, government agencies, and international donors, we've impacted over 2 million lives across 15 countries.</p>
+            </div>
+        </div>
+    </section>
+    <section id="focus" class="page-content">
+        <div class="section-title">
+            <h2>Our Focus Areas</h2>
+            <p>Addressing poverty through comprehensive approaches</p>
+        </div>
+        <div class="focus-grid">
+            <div class="focus-card">
+                <div class="focus-image">
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Education">
+                </div>
+                <div class="focus-content">
+                    <h4>Education Access</h4>
+                    <p>Providing quality education to children in underserved communities, breaking the cycle of poverty through knowledge and skills development.</p>
+                    <a href="#info" class="learn-more">Learn More →</a>
+                </div>
+            </div>
+            <div class="focus-card">
+                <div class="focus-image">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Food Security">
+                </div>
+                <div class="focus-content">
+                    <h4>Food Security</h4>
+                    <p>Ensuring consistent access to nutritious food through sustainable agriculture and food distribution programs.</p>
+                    <a href="#info" class="learn-more">Learn More →</a>
+                </div>
+            </div>
+            <div class="focus-card">
+                <div class="focus-image">
+                    <img src="https://images.unsplash.com/photo-1576765608622-2e7bd61d8418?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Healthcare">
+                </div>
+                <div class="focus-content">
+                    <h4>Healthcare Access</h4>
+                    <p>Providing essential medical services and health education to vulnerable communities facing healthcare disparities.</p>
+                    <a href="#info" class="learn-more">Learn More →</a>
+                </div>
+            </div>
+            <div class="focus-card">
+                <div class="focus-image">
+                    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Economic Empowerment">
+                </div>
+                <div class="focus-content">
+                    <h4>Economic Empowerment</h4>
+                    <p>Creating sustainable livelihood opportunities through vocational training, microfinance, and small business support.</p>
+                    <a href="#info" class="learn-more">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-label">Lives Impacted</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">15</div>
+                <div class="stat-label">Countries Reached</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">250+</div>
+                <div class="stat-label">Local Partners</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">85%</div>
+                <div class="stat-label">Program Efficiency</div>
+            </div>
+        </div>
+    </section>
+    <section class="page-content">
+        <div class="section-title">
+            <h2>The Reality We Face</h2>
+            <p>Understanding the challenges to create effective solutions</p>
+        </div>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1582213781306-21b78318866c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Urban Poverty">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1547483238-2d477f6f3236?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Rural Challenges">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Community Support">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1582213781306-21b78318866c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Hope and Change">
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="page-content">
+        <div class="section-title">
+            <h2>Contact Us</h2>
+            <p>Get in touch to learn more about our work</p>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Our Information</h3>
+                <div class="contact-details">
+                    <p>📍 ADB LAB NAKAWA</p>
+                    <p>📞 256 758 750199</p>
+                    <p>✉️ contact@zeropoverty.org</p>
+                    <p>🕒 Mon-Fri: 9AM-6PM</p>
+                </div>
+                <div class="social-links">
+                    <h3>Follow Our Work</h3>
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h3>Send Us a Message</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" required></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Involved Page -->
+    <section id="info" class="page-content">
+        <div class="section-title">
+            <h2>Get Involved</h2>
+            <p>Discover how you can contribute to ending poverty</p>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Make a Difference Today</h3>
+                <p>Your support can transform lives and create lasting change in communities affected by poverty. We offer multiple ways for individuals and organizations to get involved.</p>
+               
+                <h4>Ways to Contribute:</h4>
+                <p>• <strong>Volunteer:</strong> Join our field programs or remote opportunities</p>
+                <p>• <strong>Donate:</strong> Support our sustainable devel
